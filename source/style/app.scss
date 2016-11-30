@@ -1,0 +1,13 @@
+// Variables
+$footer-height: 150px;
+
+
+
+// Adjustments
+@import 'common/**/*.scss';
+
+//Elements
+@import 'elements/**/*.scss';
+
+// Pages
+@import 'pages/**/*.scss';
