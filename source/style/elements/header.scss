@@ -1,0 +1,110 @@
+.header {
+	width: 100%;
+	height: 100vh;
+	min-height: 650px;
+	overflow: hidden;
+	padding: 25px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 0;
+
+	&:before {
+		content: "";
+		background: #016672;
+		opacity: .3;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -20;
+	}
+
+		@include tablet {
+		max-height: 505px;
+	}
+
+}
+
+.header__background-text {
+    width: 90%;
+    height: 90%;
+	background-size: contain;
+	z-index: -10;
+	opacity: .06;
+	@include centerY;
+}
+
+.header__background-text_about,
+.header__background-text_works {
+	background: url("../img/svg/portfolio_header.svg") center no-repeat;
+	background-size: contain;
+}
+
+.header__background-text_blog {
+	background: url("../img/svg/blog_header.svg") center no-repeat;
+	background-size: contain;
+}
+
+.header__top {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.introduction {
+	text-align: center;
+}
+
+.introduction__photo {
+	width: 140px;
+	height: 140px;
+	margin: 0 auto;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+
+	img {
+		height: 100%;
+		@include center;
+	}
+
+}
+
+.introduction__name-text {
+	font-family: $fontHeadingSecond;
+	@include font(35px, 45px, $mainColorLight, normal);
+
+	&:before,
+	&:after {
+		content: none;
+	}
+
+}
+
+.introduction__greeting-text {
+	font-family: $fontLight;
+	@include font(16px, 24px, $mainColorLight, normal);
+}
+
+.arrow-down {
+	display: block;
+	color: $mainIconColorLight;
+	text-decoration: none;
+	font-size: 17px;
+	margin: 0 auto 70px;
+	z-index: 10;
+
+	&:hover {
+		color: $mainIconColorLightHover;
+	}
+
+	&:active {
+		color: $mainIconColorLightActive;
+	}
+
+}

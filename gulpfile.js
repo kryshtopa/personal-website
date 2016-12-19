@@ -12,6 +12,7 @@ global.$ = {
   gulp: require('gulp'),
   del: require('del'),
   spritesmith: require('gulp.spritesmith'),
+  imageminPngquant: require('imagemin-pngquant'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };
@@ -30,13 +31,17 @@ $.gulp.task('default', $.gulp.series(
     'js:process',
     'copy:image',
     'copy:fonts',
-    'css:foundation',
-    'sprite:svg'
+    'copy:svg',
+    'css:foundation'
   ),
   $.gulp.parallel(
     'watch',
     'serve'
   )
+));
+
+$.gulp.task('upload', $.gulp.series(
+  'imagemin'
 ));
 
 $.gulp.task('upload', $.gulp.series(

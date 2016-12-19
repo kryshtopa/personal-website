@@ -1,7 +1,11 @@
 // Variables
-$footer-height: 150px;
+@import "common/variables.scss";
 
+// Mixins
+@import "common/mixins.scss";
 
+// Fonts
+@import 'fonts/**/*.scss';
 
 // Adjustments
 @import 'common/**/*.scss';

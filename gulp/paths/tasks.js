@@ -12,9 +12,10 @@ module.exports = [
   './gulp/tasks/js.lint.js',
   './gulp/tasks/copy.image.js',
   './gulp/tasks/copy.fonts.js',
+  './gulp/tasks/copy.svg.js',
   './gulp/tasks/sftp.js',
   './gulp/tasks/sprite.js',
-  './gulp/tasks/sprite.svg.js',
+  './gulp/tasks/imagemin.js',
   './gulp/tasks/sftp.js'
 ];
 

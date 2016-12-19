@@ -1,0 +1,78 @@
+.footer {
+	background-color: $footeColorBG;
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer__row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 75px;
+	padding: 0 25px;
+	border-bottom: 1px solid rgba($mainColorLight, .1);
+
+	@include tablet {
+		width: 100%;
+		flex-direction: column;
+		height: auto;
+		padding: 20px;
+	}
+
+	&:last-of-type {
+		border-bottom: none;
+	}
+
+}
+
+.footer__col {
+	&.col-1 {
+		text-align: left;
+	}
+
+	&.col-2 {
+		text-align: right;
+	}
+
+	@include tablet {
+		width: 100%;
+
+		&.col-1,
+		&.col-2 {
+			text-align: center;
+		}
+
+		&.col-1 {
+			margin-bottom: 15px;
+		}
+
+	}
+
+}
+
+.footer-nav__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-right: -25px;
+}
+
+.footer-nav__item {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 25px;
+}
+
+.footer-nav__link {
+	@include link(none, 16px, 24px, normal, $mainColorLight, $mainColorLightHover, $mainColorLightActive);
+	font-family: $fontMedium;
+}
+
+.message,
+.copyright {
+	font-family: $fontLight;
+	@include font(16px, 24px, rgba($mainColorLight, .5), normal);
+}
