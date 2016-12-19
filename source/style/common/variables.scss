@@ -1,0 +1,66 @@
+// Variables
+
+$mainColor: #455a64;
+$mainColorLight: #ffffff;
+$mainColorDark: #373e42;
+$accentColor: #00bfa5;
+
+$mainColorLightHover: darken($mainColorLight, 30%);
+$mainColorLightActive: darken($mainColorLight, 60%);
+
+$accentColorHover: #009688;
+$accentColorActive: darken($accentColor, 10%);
+
+$mainIconColorLight: rgba(#ffffff, 0.7);
+$mainIconColorLightHover: #ffffff;
+$mainIconColorLightActive: darken($mainIconColorLight, 30%);
+
+$hamburgerColor: $mainIconColorLight;
+
+$aboutColor1: #efeee9;
+$aboutColor2: #eeebdf;
+
+$worksBgColor: #faf8f0;
+
+$worksSliderBgColor1: #efeee9;
+$worksSliderBgColor2: #eeebdf;
+
+
+$triangleAboutColor1: $aboutColor1;
+$triangleAboutColor2: $aboutColor2;
+$triangleBlogColor: #ffffff;
+$triangleWorksColor: $worksBgColor;
+$triangleHeight: 50px;
+
+$welcomeNavBgColor: rgba($accentColor, .7);
+$welcomeNavBgColorHover: rgba($accentColorHover, .5);
+$welcomeNavBgColorActive: rgba($accentColorActive, .5);
+
+$footerHeight: 150px;
+$footeColorBG: rgba(#373e42, .85);
+
+$loginInputBeforeColor: #c4cbcd;
+$loginInputBeforeBgColor: #f0efe9;
+
+// Fonts variables
+$font: roboto;
+$fontMedium: roboto medium;
+$fontLight: roboto light;
+$fontBold: roboto bold;
+
+$fontHeading: bernier;
+$fontHeadingSecond: $fontMedium;
+
+$fontColorPseudo: #c3c4c0;
+
+$transitionSpeed: .4s;
+$transitionType: ease-in-out;
+$transition: all $transitionSpeed $transitionType;
+
+$width: 1000px;
+
+// Media queries
+$hd-width: 1800px;
+$desktop-width: 1200px;
+$tablet-width: 768px;
+$mobile-width: 414px;

@@ -1,0 +1,300 @@
+.works__heading {
+	background-color: $worksBgColor;
+	text-align: center;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		@include centerX;
+		top: -70px;
+		width: 160%;
+		height: 160%;
+		opacity: .07;
+		z-index: -10;
+		background: url("../img/svg/works_header.svg") center no-repeat;
+		background-size: contain;
+	}
+
+}
+
+.works__h1 {
+	@include font(63px, 56px, false, normal);
+	margin: 60px auto 70px;
+
+	@include tablet {
+		@include font(49px, 52px, false, normal);
+		margin: 40px auto 50px;
+	}
+
+}
+
+.testimonials {
+	position: relative;
+	overflow: hidden;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+}
+
+.testimonials__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-width: 900px;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	@include tablet {
+		min-width: 1200px;
+	}
+
+}
+
+.testimonials__heading {
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		@include centerX;
+		top: -70px;
+		width: 160%;
+		height: 160%;
+		opacity: .07;
+		z-index: -10;
+		background: url("../img/svg/about_header.svg") center no-repeat;
+		background-size: contain;
+	}
+
+}
+
+.testimonials__h2 {
+	@include font(63px, 66px, false, normal);
+	max-width: 275px;
+	margin: 60px auto 50px;
+
+	@include tablet {
+		@include font(49px, 52px, false, normal);
+		max-width: 100%;
+		margin: 50px auto 40px;
+	}
+
+}
+
+.testimonials__list {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.testimonials__item {
+	position: relative;
+	width: 50%;
+	padding-top: 45px;
+	margin-bottom: 30px;
+
+	&:before {
+		content: '\f901';
+		font-family: 'icomoon-fa' !important;
+		font-size: 28px;
+		opacity: .2;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	@include tablet {
+		width: 48%;
+		margin-right: 2%;
+	}
+
+}
+
+.testimonials__text {
+	@include font(16px, 26px, false, normal);
+
+	@include tablet {
+		@include font(14px, 24px, false, false);
+	}
+
+}
+
+.testimonials__meta {
+	display: flex;
+}
+
+.testimonials__img {
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+
+	img {
+		@include center;
+	}
+
+	@include tablet {
+		width: 75px;
+		height: 75px;
+	}
+
+}
+
+.testimonials__about {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 20px;
+}
+
+.testimonials__name,
+.testimonials__position {
+	@include font(16px, 24px, $accentColor, normal);
+
+	@include tablet {
+		@include font(14px, 24px, false, false);
+	}
+
+}
+
+.testimonials__name {
+	font-family: $fontBold;
+}
+
+.testimonials__position {
+	font-family: $font;
+}
+
+.works-contact__wrapper {
+	width: 380px;
+	margin: auto;
+	margin-bottom: 70px;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+}
+
+.works-contact__blur {
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg-works.png');
+	background-repeat: no-repeat;
+	background-size: 900px;
+	background-position: -300px -577px;
+	filter: blur(20px);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 99;
+
+	@include tablet {
+		background-size: 1200px;
+	}
+
+}
+
+.works-contact {
+	padding: 30px 20px;
+	text-align: center;
+	position: relative;
+	z-index: 100;
+	background: transparent;
+}
+
+.works-contact__h3 {
+	@include font(35px, 41px, false, normal);
+	margin: 0 45px 35px;
+
+	@include tablet {
+		@include font(30px, 41px, false, false);
+	}
+
+}
+
+.works-contact__input-text {
+	height: 45px;
+	width: 100%;
+	padding: 0 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	background: $mainColorLight;
+}
+
+.works-contact__textarea {
+	height: 140px;
+	width: 100%;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	background: $mainColorLight;
+	resize: vertical;
+}
+
+.works-contact__link-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 -20px -30px -20px;
+}
+
+.works-contact__link {
+	display: block;
+	text-decoration: none;
+	font-family: $fontMedium;
+	@include font(16px, 50px, $mainColorLight, normal);
+	margin-right: 2px;
+	width: 50%;
+	background-color: $welcomeNavBgColor;
+
+	&:hover {
+		background-color: $welcomeNavBgColorHover;
+	}
+
+	&:active {
+		background-color: $welcomeNavBgColorActive;
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+}
+
+.arrow-up {
+	display: block;
+	color: $mainIconColorLight;
+	text-decoration: none;
+	font-size: 17px;
+	margin: 0 auto 70px;
+	z-index: 10;
+
+	&:hover {
+		color: $mainIconColorLightHover;
+	}
+
+	&:active {
+		color: $mainIconColorLightActive;
+	}
+
+}

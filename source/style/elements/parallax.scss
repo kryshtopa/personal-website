@@ -1,0 +1,40 @@
+.parallax {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -100;
+}
+
+.parallax__layer {
+	width: 3000px;
+	width: 130vw;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	margin-left: -1500px;
+	margin-left: -55vw;
+
+	img {
+		display: block;
+		width: 100%;
+		position: absolute;
+		top: 0;
+	}
+
+	@include tablet {
+		width: 160vw;
+	}
+
+	@include portrait {
+		img {
+			width: auto;
+			height: 100%;
+		}
+
+	}
+
+}

@@ -1,0 +1,132 @@
+.welcome__back {
+	width: 100%;
+	height: auto;
+	background-color: rgba(#fcfcfc, 0.85);
+	border-radius: 5px;
+	overflow: hidden;
+	padding-top: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	.login-headline {
+		@include font(35px, 41px, false, normal);
+		margin: 10px auto 30px;
+	}
+
+	.login-form {
+		width: 100%;
+		padding: 0 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		@include font(16px, 24px, false, normal);
+		font-family: $font;
+	}
+
+	.login-form__input-wrap {
+		display: flex;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.login-form__input-before {
+		background: $loginInputBeforeBgColor;
+		width: 45px;
+		height: 45px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		position: relative;
+
+		&:before {
+			font-family: 'CCU-Icons-Font';
+			@include font(15px, 45px, $loginInputBeforeColor, normal);
+			display: block;
+			text-align: center;
+		}
+
+	}
+
+	.login-form__input-before--login {
+		&:before {
+			content: '\e90c';
+		}
+
+	}
+
+	.login-form__input-before--password {
+		&:before {
+			content: '\e90f';
+		}
+
+	}
+
+	.login-form__input-text {
+		height: 45px;
+		padding: 0 20px;
+		flex-grow: 1;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border: none;
+		background: $mainColorLight;
+		z-index: 10;
+	}
+
+	.login-form__radio-wrap {
+		margin: 10px auto 30px;
+	}
+
+	.login-form__radio-span {
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin: 5px auto;
+		font-family: $fontBold;
+		@include font(16px, 24px, false, normal);
+	}
+
+	.welcome-nav {
+		width: 100%;
+	}
+
+	.welcome-nav__list {
+		height: 50px;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.welcome-nav__item {
+		text-align: center;
+		background-color: $welcomeNavBgColor;
+		margin-right: 2px;
+		width: 50%;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+	.welcome-nav__link {
+		display: block;
+		text-decoration: none;
+		font-family: $fontMedium;
+		@include font(16px, 50px, $mainColorLight, normal);
+
+		&:hover {
+			background-color: $welcomeNavBgColorHover;
+		}
+
+		&:active {
+			background-color: $welcomeNavBgColorActive;
+		}
+
+	}
+
+}

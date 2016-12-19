@@ -1,0 +1,23 @@
+.socials__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-right: -25px;
+}
+
+.socials__item {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 25px;
+}
+
+.socials__link {
+	@include link(none, 22px, 22px, normal, $mainIconColorLight, $mainIconColorLightHover, $mainIconColorLightActive);
+}
+
+.footer__socials {
+	.socials__link {
+		font-size:36px;
+		line-height: 36px;
+	}
+}

@@ -1,0 +1,106 @@
+/* For checkbox */
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+
+.checkbox + label {
+  cursor: pointer;
+}
+
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 30px;
+}
+
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  background: $accentColor;
+}
+
+.checkbox:not(checked) + label:after {
+  content: '\e902';
+  font-family: 'CCU-Icons-Font';
+  font-size: 9px;
+  line-height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  opacity: 0;
+  width: 20px;
+  text-align: center;
+  color: $mainColorLight;
+  transition: all .2s;
+}
+
+.checkbox:checked + label:after {
+  opacity: 1;
+}
+
+/* For radio */
+.radio {
+  vertical-align: top;
+  width: auto;
+  height: 20px;
+}
+
+.radio + label {
+  cursor: pointer;
+}
+
+.radio:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 30px;
+  margin: 0 20px;
+}
+
+.radio:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $loginInputBeforeColor;
+  border-radius: 50%;
+  background: $mainColorLight;
+}
+
+.radio:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $accentColor;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.radio:checked + label {
+  color: $accentColor;
+}
+
+.radio:checked + label:after {
+  opacity: 1;
+}

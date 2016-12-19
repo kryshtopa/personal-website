@@ -1,0 +1,191 @@
+.slider {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 750px;
+	max-height: 750px;
+
+	@include tablet {
+		height: auto;
+		max-height: none;
+
+	}
+
+}
+
+.slider-description,
+.slider-content,
+.controls__prev,
+.controls__next {
+	position: relative;
+}
+
+.slider-description__list,
+.slider-content__list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.slider-description,
+.slider-content,
+.controls {
+	width: 50%;
+	overflow: hidden;
+
+	@include tablet {
+		width: 100%;
+	}
+
+}
+
+.slider-description {
+	order: 10;
+	height: 100%;
+
+	@include tablet {
+		order: 20;
+		height: 270px;
+	}
+
+}
+
+.slider-description__list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	background-color: $worksSliderBgColor1;
+}
+
+.slider-content {
+	order: 20;
+	height: 525px;
+
+	@include tablet {
+		order: 10;
+		height: 530px;
+	}
+
+}
+
+.slider-content__list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	background-color: $worksSliderBgColor2;
+}
+
+@keyframes top {
+	from {
+		top: -100%;
+	}
+
+	to {
+		top: 0%;
+	}
+
+}
+
+@keyframes bottom {
+	from {
+		top: 100%;
+	}
+
+	to {
+		top: 0%;
+	}
+
+}
+
+.slider-description__item,
+.slider-content__item {
+	display: none;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	animation-duration: .5s;
+}
+
+.slider-description__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+}
+
+.slider-content__item {
+	img {
+		display: block;
+		height: 80%;
+		margin: 10% auto;
+	}
+
+}
+
+.controls {
+	order: 30;
+	display: flex;
+	height: 225px;
+	margin-top: auto;
+	margin-left: auto;
+
+	@include tablet {
+		height: 215px;
+	}
+
+}
+
+.controls__prev,
+.controls__next {
+	display: block;
+	width: 50%;
+	background-color: transparent;
+
+	.slider-content__list {
+		&:before {
+			font-family: 'CCU-Icons-Font' !important;
+			@include font(28px, 28px, $mainColorLight, normal);
+			@include center;
+			z-index: 20;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: #b6b4ae;
+			opacity: .7;
+		}
+
+	}
+
+}
+
+.controls__prev {
+	.slider-content__list {
+		&:before {
+			content: '\e901';
+		}
+
+	}
+
+}
+
+.controls__next {
+	.slider-content__list {
+		&:before {
+			content: '\e900';
+		}
+
+	}
+
+}

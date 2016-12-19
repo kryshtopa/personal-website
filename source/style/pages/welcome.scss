@@ -1,0 +1,86 @@
+.welcome-wrapper {
+	height: 100%;
+	min-height: 650px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.welcome__header {
+	width: 100%;
+	text-align: right;
+	padding: 25px;
+	display: block;
+}
+
+.auth__button {
+	display: inline-block;
+	font-family: $fontMedium;
+	@include font(16px, 18px, $mainColorLight, normal);
+	padding: 13px 27px;
+	border: 2px solid $mainColorLight;
+	border-radius: 5px;
+	text-decoration: none;
+	opacity: 0;
+	z-index: -100;
+	transition: $transition;
+
+	&:hover {
+		cursor: default;
+	}
+
+	&.active {
+		opacity: 1;
+
+		&:hover {
+			cursor: pointer;
+			color: $accentColor;
+			border: 2px solid $mainColorLight;
+			background: $mainColorLight;
+		}
+
+		&:active {
+			color: $accentColorActive;
+			border: 2px solid $mainColorLight;
+			background: $mainColorLight;
+		}
+
+	}
+
+}
+
+.welcome {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 380px;
+	min-height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.welcome__flipper {
+		height: auto;
+		width: 100%;
+	}
+
+}
+
+.welcome-footer {
+	background-color: transparent !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 0;
+}
+
+.welcome-footer__copyright {
+	@include font(16px, 100px, rgba($mainColorLight, 1), normal);
+
+	@include tablet {
+		@include font(14px, 24px, false, false);
+		margin-bottom: 25px;
+	}
+
+}

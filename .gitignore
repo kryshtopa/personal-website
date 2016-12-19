@@ -41,6 +41,4 @@ npm-debug.log
 # SFTP auth information file
 #.ftppass
 
-source/style
 source/js
-source/fonts

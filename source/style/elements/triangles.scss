@@ -1,0 +1,31 @@
+.angles {
+	margin: 0;
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+}
+
+.triangle-about .left {
+	fill: $triangleAboutColor1;
+}
+
+.triangle-about .right {
+	fill: $triangleAboutColor2;
+}
+
+.triangle-blog .left {
+	fill: $triangleBlogColor;
+}
+
+.triangle-blog .right {
+	fill: $triangleBlogColor;
+}
+
+.triangle-works .left {
+	fill: $triangleWorksColor;
+}
+
+.triangle-works .right {
+	fill: $triangleWorksColor;
+}

@@ -1,0 +1,85 @@
+.welcome__front {
+	width: 100%;
+	height: auto;
+	background-color: rgba(#fcfcfc, 0.85);
+	border-radius: 5px;
+	overflow: hidden;
+	padding-top: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	.introduction {
+		position: initial;
+		top: 0;
+		left: 0;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+
+	.introduction__name-text,
+	.introduction__greeting-text {
+		color: $mainColorDark;
+	}
+
+	.introduction__name-text {
+		@include tablet {
+			@include font(28px, 34px, false, false);
+		}
+	}
+
+	.socials {
+		width: 100%;
+		margin: 35px auto;
+		text-align: center;
+	}
+
+	.socials__link {
+		@include link(none, 22px, 22px, normal, $accentColor, $accentColorHover, $accentColorActive);
+	}
+
+	.welcome-nav {
+		width: 100%;
+	}
+
+	.welcome-nav__list {
+		height: 50px;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.welcome-nav__item {
+		text-align: center;
+		background-color: $welcomeNavBgColor;
+		margin-right: 2px;
+		flex-grow: 1;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+	.welcome-nav__link {
+		display: block;
+		text-decoration: none;
+		font-family: $fontMedium;
+		@include font(16px, 51px, $mainColorLight, normal);
+
+		&:hover {
+			background-color: $welcomeNavBgColorHover;
+		}
+
+		&:active {
+			background-color: $welcomeNavBgColorActive;
+		}
+
+	}
+
+}
