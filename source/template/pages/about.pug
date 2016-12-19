@@ -1,0 +1,95 @@
+extends ../inner
+
+block variables
+	- var page = 'about'
+	- var title = 'About Me - Dmitry Kryshtopa'
+	- var triangleClass = 'triangle-about'
+
+block content
+	main.about
+		.about__col.col-1
+			.about__container
+				.about__heading.heading
+					h1.about__h1.h1 Обо мне
+				.about__photo
+					img(src="/assets/img/Dmitry-Kryshtopa.jpg" alt="Dmitry Kryshtopa")
+				h2.about__h2.h2 Кто я
+				p.about__text.p Я веб-разработчик из Киева. Мне 31 год. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современнные проекты.
+				p.about__text.p Этот сайт я сделал в рамках своего обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
+		.about__col.col-2
+			.about__container
+				h2.about__h2.h2 Чем я могу быть вам полезен
+				.about__text.p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.
+				.skills
+					h3.skills__h3.h3 Frontend
+					ul.skills__list
+						li.skills__item
+							svg(class="svg-circle")
+								text.svg-circle__text(x="55" y="55" text-anchor="middle" alignment-baseline="central") HTML5
+								circle.svg-circle__wrap(r="45" cx="55" cy="55" stroke="#ccc" fill="none") 
+								circle.svg-circle__sector.svg-circle__sector_css(r="115" cx="135" cy="135" stroke="#000" transform="rotate(-90 55 55)")
+						li.skills__item
+							svg(width="270" height="270" class="svg-circle")
+								text.svg-circle__text(x="55" y="55" text-anchor="middle" alignment-baseline="central") CSS3
+								circle.svg-circle__wrap(r="45" cx="55" cy="55" stroke="#ccc" fill="none") 
+								circle.svg-circle__sector.svg-circle__sector_html(r="115" cx="135" cy="135" stroke="#000" transform="rotate(-90 55 55)")
+						li.skills__item
+							svg(width="270" height="270" class="svg-circle")
+								text.svg-circle__text(x="55" y="48" text-anchor="middle" alignment-baseline="central" width="50") Javascript
+								text.svg-circle__text(x="55" y="62" text-anchor="middle" alignment-baseline="central" width="50") & jQuery
+								circle.svg-circle__wrap(r="45" cx="55" cy="55" stroke="#ccc" fill="none") 
+								circle.svg-circle__sector.svg-circle__sector_html(r="115" cx="135" cy="135" stroke="#000" transform="rotate(-90 55 55)")
+					h3.skills__h3.h3 Backend
+					ul.skills__list
+						li.skills__item
+							svg(class="svg-circle")
+								text.svg-circle__text(x="55" y="55" text-anchor="middle" alignment-baseline="central") PHP
+								circle.svg-circle__wrap(r="45" cx="55" cy="55" stroke="#ccc" fill="none") 
+								circle.svg-circle__sector.svg-circle__sector_css(r="115" cx="135" cy="135" stroke="#000" transform="rotate(-90 55 55)")
+						li.skills__item
+							svg(width="270" height="270" class="svg-circle")
+								text.svg-circle__text(x="55" y="55" text-anchor="middle" alignment-baseline="central") mySQL
+								circle.svg-circle__wrap(r="45" cx="55" cy="55" stroke="#ccc" fill="none") 
+								circle.svg-circle__sector.svg-circle__sector_html(r="115" cx="135" cy="135" stroke="#000" transform="rotate(-90 55 55)")
+						li.skills__item
+							svg(width="270" height="270" class="svg-circle")
+								text.svg-circle__text(x="55" y="48" text-anchor="middle" alignment-baseline="central" width="50") Node.js
+								text.svg-circle__text(x="55" y="62" text-anchor="middle" alignment-baseline="central" width="50") & npm
+								circle.svg-circle__wrap(r="45" cx="55" cy="55" stroke="#ccc" fill="none") 
+								circle.svg-circle__sector.svg-circle__sector_html(r="115" cx="135" cy="135" stroke="#000" transform="rotate(-90 55 55)")
+						li.skills__item
+							svg(width="270" height="270" class="svg-circle")
+								text.svg-circle__text(x="55" y="55" text-anchor="middle" alignment-baseline="central") Mongo.db
+								circle.svg-circle__wrap(r="45" cx="55" cy="55" stroke="#ccc" fill="none") 
+								circle.svg-circle__sector.svg-circle__sector_html(r="115" cx="135" cy="135" stroke="#000" transform="rotate(-90 55 55)")
+					h3.skills__h3.h3 Workflow
+					ul.skills__list
+						li.skills__item
+							svg(class="svg-circle")
+								text.svg-circle__text(x="55" y="55" text-anchor="middle" alignment-baseline="central") Git
+								circle.svg-circle__wrap(r="45" cx="55" cy="55" stroke="#ccc" fill="none") 
+								circle.svg-circle__sector.svg-circle__sector_css(r="115" cx="135" cy="135" stroke="#000" transform="rotate(-90 55 55)")
+						li.skills__item
+							svg(width="270" height="270" class="svg-circle")
+								text.svg-circle__text(x="55" y="55" text-anchor="middle" alignment-baseline="central") Gulp
+								circle.svg-circle__wrap(r="45" cx="55" cy="55" stroke="#ccc" fill="none") 
+								circle.svg-circle__sector.svg-circle__sector_html(r="115" cx="135" cy="135" stroke="#000" transform="rotate(-90 55 55)")
+						li.skills__item
+							svg(width="270" height="270" class="svg-circle")
+								text.svg-circle__text(x="55" y="55" text-anchor="middle" alignment-baseline="central") Bower
+								circle.svg-circle__wrap(r="45" cx="55" cy="55" stroke="#ccc" fill="none") 
+								circle.svg-circle__sector.svg-circle__sector_html(r="115" cx="135" cy="135" stroke="#000" transform="rotate(-90 55 55)")
+
+	section.map
+		#map
+		aside.contact
+			h2.contact__h2.h2 Контакты
+			ul.contact__list
+				li.contact__item
+					a(class="contact__link icon-skype" href="skype:krysht0pa" target="_blank") krysht0pa
+				li.contact__item
+					a(class="contact__link icon-envelope" href="mailto:mail@kryshtopa.com" target="_blank") mail@kryshtopa.com
+				li.contact__item
+					a(class="contact__link icon-phone" href="tel:+38269679550" target="_blank") +38269679550
+
+	script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAPavuivp-e7mwJvrgCip8yH9Pq0Uyurk&callback=initMap")

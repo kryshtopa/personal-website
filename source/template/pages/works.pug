@@ -1,0 +1,31 @@
+extends ../inner
+
+block variables
+	- var page = 'works'
+	- var title = 'Works - Dmitry Kryshtopa'
+	- var triangleClass = 'triangle-works'
+
+block content
+	main.works
+		.works__heading.heading
+			h1.works__h1.h1 Мои работы
+		include ../common/works-slider
+	section.testimonials
+		.testimonials__bg
+			img(src="./assets/img/bg-works.png" alt="beautyful lake")
+		.container
+			.testimonials__heading.heading
+				h2.testimonials__h2.h1 Что обо мне говорят
+			include ../common/testimonials
+			.works-contact__wrapper
+				.works-contact__blur
+				.works-contact
+					h3.works-contact__h3.h2 Связаться со мной
+					form.works-contact__form
+						input.works-contact__input-text(type="text" placeholder="Имя")
+						input.works-contact__input-text(type="text" placeholder="Email")
+						textarea.works-contact__textarea(placeholder="Email")
+						.works-contact__link-row
+							a.works-contact__link(id="buttomSend" href="#") Отправить
+							a.works-contact__link(id="buttonClean" href="#") Очистить
+			a(href="#").arrow-up.icon-arrow_up

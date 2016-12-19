@@ -1,0 +1,10 @@
+extends ../inner
+
+block variables
+	- var page = 'blog'
+	- var title = 'Blog - Dmitry Kryshtopa'
+	- var triangleClass = 'triangle-blog'
+
+block content
+	.container.container--blog
+		include ../common/blog-content

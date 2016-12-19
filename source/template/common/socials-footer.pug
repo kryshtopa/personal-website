@@ -1,0 +1,5 @@
+.socials
+	ul.socials__list
+		each href, social in {'vk':'www', 'github':'http', 'in':'www'}
+			li.socials__item
+				a(class=`socials__link icon-${social}_round` href=`${href}` target="_blank")

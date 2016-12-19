@@ -1,0 +1,51 @@
+extends ../welcome
+
+block variables
+	- var title = 'Home page'
+
+block content
+	.wrapper.welcome-wrapper
+		include ../common/parallax
+		header.welcome__header
+			.auth
+				a(href="#").auth__button.active Авторизироваться
+		section.welcome
+			.welcome__flipper
+				.welcome__front
+					.introduction
+						.introduction__photo
+							img(src="/assets/img/Dmitry-Kryshtopa.jpg" alt="Dmitry Kryshtopa")
+						.introduction__name
+							h1.introduction__name-text Дмитрий Крыштопа
+						.introduction__greeting 
+							span.introduction__greeting-text Личный сайт веб разработчика
+					include ../common/socials
+					nav.welcome-nav
+						ul.welcome-nav__list
+							each path, nav in {'Мои Работы':'/works.html', 'Обо мне':'/about.html', 'Блог':'/blog.html'}
+								li.welcome-nav__item
+									a(class="welcome-nav__link" href=`${path}`)= nav
+				.welcome__back
+					h2.login-headline Авторизируйтесь
+					form.login-form
+						.login-form__input-wrap
+							.login-form__input-before.login-form__input-before--login
+							input.login-form__input-text(type="text" placeholder="Логин")
+						.login-form__input-wrap
+							.login-form__input-before.login-form__input-before--password
+							input.login-form__input-text(type="text" placeholder="Пароль")
+						input.checkbox(type="checkbox" id="checkbox")
+						label(for="checkbox") Я человек
+						.login-form__radio-wrap
+							span.login-form__radio-span Вы точно не робот?
+							input.radio(type="radio" id="radio-1" name="robotCheck" value="yes")
+							label(for="radio-1") Да
+							input.radio(type="radio" id="radio-2" name="robotCheck" value="no")
+							label(for="radio-2") Не уверен
+					nav.welcome-nav
+						ul.welcome-nav__list
+							each id, nav in {'На главную':'welcomeHomeButton', 'Войти':'loginButton'}
+								li.welcome-nav__item
+									a(class="welcome-nav__link" id=`${id}` href="#")= nav
+		footer.footer.welcome-footer
+			span.copyright.welcome-footer__copyright.copyright Создано с любовью в LoftSchool | 2016 | © Дмитрий Крыштопа

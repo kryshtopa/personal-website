@@ -1,0 +1,24 @@
+header.header(class="header--" + page)
+	include ../common/parallax
+	.header__background-text(class="header__background-text_" + page)
+	.header__top
+		include socials
+	section.introduction
+		.introduction__photo
+			img(src="/assets/img/Dmitry-Kryshtopa.jpg" alt="Dmitry Kryshtopa")
+		.introduction__name
+			case page
+				when "blog"
+					h1.introduction__h1.h1 Блог
+				default
+					h2.introduction__name-text Дмитрий Крыштопа
+		.introduction__greeting
+			case page
+				when "blog"
+					span.introduction__greeting-text Статьи, которые я написал
+				default
+					span.introduction__greeting-text Личный сайт веб разработчика
+			.introduction__greeting
+	if page !== "blog"
+		a(href="#").arrow-down.icon-arrow_down
+	include triangles
