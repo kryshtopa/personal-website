@@ -30,10 +30,10 @@ block content
 					form.login-form
 						.login-form__input-wrap
 							.login-form__input-before.login-form__input-before--login
-							input.login-form__input-text(type="text" placeholder="Логин")
+							input.login-form__input-text(type="text" name="Логин" placeholder="Логин")
 						.login-form__input-wrap
 							.login-form__input-before.login-form__input-before--password
-							input.login-form__input-text(type="text" placeholder="Пароль")
+							input.login-form__input-text(type="text" name="Пароль" placeholder="Пароль")
 						input.checkbox(type="checkbox" id="checkbox")
 						label(for="checkbox") Я человек
 						.login-form__radio-wrap
@@ -47,5 +47,8 @@ block content
 							each id, nav in {'На главную':'welcomeHomeButton', 'Войти':'loginButton'}
 								li.welcome-nav__item
 									a(class="welcome-nav__link" id=`${id}` href="#")= nav
+					.popup
+						.popup__text Роботам здесь не место
+						a.popup__close(href="#") Закрыть
 		footer.footer.welcome-footer
 			span.copyright.welcome-footer__copyright.copyright Создано с любовью в LoftSchool | 2016 | © Дмитрий Крыштопа

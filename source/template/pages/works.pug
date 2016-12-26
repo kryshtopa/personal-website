@@ -22,10 +22,18 @@ block content
 				.works-contact
 					h3.works-contact__h3.h2 Связаться со мной
 					form.works-contact__form
-						input.works-contact__input-text(type="text" placeholder="Имя")
-						input.works-contact__input-text(type="text" placeholder="Email")
-						textarea.works-contact__textarea(placeholder="Email")
+						.works-contact__input-wrap
+							input.works-contact__input-text(type="text" name="Имя" placeholder="Имя")
+						.works-contact__input-wrap
+							input.works-contact__input-text(type="text" name="E-mail" placeholder="E-mail")
+						.works-contact__input-wrap
+							textarea.works-contact__textarea(placeholder="Сообщение")
 						.works-contact__link-row
-							a.works-contact__link(id="buttomSend" href="#") Отправить
+							a.works-contact__link(id="buttonSend" href="#") Отправить
 							a.works-contact__link(id="buttonClean" href="#") Очистить
+					.popup
+						.popup__text 
+							p Сообщение будет отправлено, когда будет работать бекэнд, а пока просто нажмите кнопку "Закрыть". 
+							p На странице #[a(href="/about.html") "Обо мне"] указаны мои контакты!
+						a.popup__close(href="#") Закрыть
 			a(href="#").arrow-up.icon-arrow_up
