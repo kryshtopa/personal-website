@@ -6,6 +6,6 @@ nav.main-nav
 	.main-nav__side.main-nav__side--left
 	.main-nav__side.main-nav__side--right
 	ul.main-nav__list
-		each path, nav in {'Мои Работы':'/works.html', 'Обо мне':'/about.html', 'Блог':'/blog.html', 'Авторизация':'/welcome.html'}
+		each path, nav in {'Мои Работы':'/works.html', 'Обо мне':'/about.html', 'Блог':'/blog.html', 'Авторизация':'/'}
 			li.main-nav__item
 				a(class="main-nav__link" href=`${path}`)= nav
