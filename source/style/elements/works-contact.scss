@@ -1,0 +1,148 @@
+.works-contact__wrapper {
+	width: 380px;
+	margin: auto;
+	margin-bottom: 70px;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+
+	@include mobile {
+		width: 90%;
+	}
+
+}
+
+.works-contact__blur {
+	width: 100%;
+	height: 100%;
+	background: url('../img/bg-works.png');
+	background-repeat: no-repeat;
+	background-size: 900px;
+	background-position: -300px -577px;
+	filter: blur(20px);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 99;
+
+	@include tablet {
+		background-size: 1200px;
+	}
+
+}
+
+.works-contact {
+	padding: 30px 20px;
+	text-align: center;
+	position: relative;
+	z-index: 100;
+	background: transparent;
+}
+
+.works-contact__h3 {
+	@include font(35px, 41px, false, normal);
+	margin: 0 45px 35px;
+
+	&:before,
+	&:after {
+		background-color: $mainColor;
+	}
+
+	@include tablet {
+		@include font(30px, 41px, false, false);
+	}
+
+}
+
+.works-contact__input-wrap {
+	position: relative;
+
+	.tooltip {
+		position: absolute;
+		bottom: -30px;
+		left: -10px;
+		z-index: 100;
+		background: $errorColor;
+		padding: 12px;
+		border-radius: 4px;
+		color: $mainColorLight;
+
+		&:before {
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 5px 5px 5px;
+			border-color: transparent transparent $errorColor transparent;
+			position: absolute;
+			top: -5px;
+			left: 20px;
+		}
+
+	}
+
+}
+
+.works-contact__input-text {
+	height: 45px;
+	width: 100%;
+	padding: 0 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	background: $mainColorLight;
+
+	&.error {
+		border: 1px solid $errorColor;
+	}
+
+}
+
+.works-contact__textarea {
+	height: 140px;
+	width: 100%;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	background: $mainColorLight;
+	resize: vertical;
+
+	&.error {
+		border: 1px solid $errorColor;
+	}
+
+}
+
+.works-contact__link-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 -20px -30px -20px;
+}
+
+.works-contact__link {
+	display: block;
+	text-decoration: none;
+	font-family: $fontMedium;
+	@include font(16px, 50px, $mainColorLight, normal);
+	margin-right: 2px;
+	width: 50%;
+	background-color: $welcomeNavBgColor;
+
+	&:hover {
+		background-color: $welcomeNavBgColorHover;
+		color: $mainColorLight;
+	}
+
+	&:active {
+		background-color: $welcomeNavBgColorActive;
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+}

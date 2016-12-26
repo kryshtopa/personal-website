@@ -85,11 +85,21 @@
 	margin-bottom: 10px;
 }
 
-.about__photo {
+.about__media {
 	margin: 40px 0;
 	position: relative;
 	min-height: 390px;
 	overflow: hidden;
+
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 
 	img {
 		height: 100%;
@@ -153,6 +163,10 @@
 	padding: 30px 40px;
 	text-align: center;
 	z-index: 10;
+
+	@include tablet {
+	    width: 85%;
+	}
 }
 
 .contact__h2 {

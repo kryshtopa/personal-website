@@ -1,3 +1,7 @@
+.wrapper--active {
+	padding-left: 30%;
+}
+
 .header--blog {
 	height: auto;
 	min-height: 400px;
@@ -22,15 +26,60 @@
 }
 
 .container--blog {
-	padding: 50px 0;
+	padding: 0 0 50px;
 	display: flex;
+	position: relative;
 }
 
 .blog-nav {
+	padding-top: 50px;
 	flex: 1;
 	display: flex;
 
 	@include tablet {
+		position: fixed;
+		left: -30%;
+		top: 0;
+		width: 30%;
+		height: 100%;
+		background-color: $accentColor;
+		z-index: 100;
+
+		.blog-nav__trigger {
+			display: block;
+			@include centerY;
+			right: -20px;
+			width: 40px;
+			height: 40px;
+			background-color: $accentColor;
+			border-radius: 50%;
+
+			&:before {
+				content: '\e900';
+				font-family: 'CCU-Icons-Font' !important;
+				@include font(14px, 14px, $mainColorLight, normal);
+				position: absolute;
+				top: 14px;
+				left: 21px;
+				transform: rotate(270deg);
+			}
+
+		}
+
+	}
+
+}
+
+.blog-nav__trigger {
+	display: none;
+}
+
+.blog-nav--active {
+	@include tablet {
+		left: 0;
+	}
+
+	.blog-nav__trigger {
 		display: none;
 	}
 
@@ -46,6 +95,19 @@
 	padding: 0;
 	width: 80%;
 	margin-right: auto;
+	position: relative;
+}
+
+.blog-nav__list--fixed {
+	position: fixed;
+	top: 50px;
+
+	@include tablet {
+		width: 100% !important;
+		position: relative;
+		padding: 0 10%;
+	}
+
 }
 
 .blog-nav__item {
@@ -61,6 +123,13 @@
 	@include link(none, 22px, 26px, normal, $mainColor, $accentColor, $accentColorActive);
 	font-family: $font;
 	display: block;
+	padding: 8px 0;
+
+	@include tablet {
+		@include link(none, 16px, 20px, normal, darken($mainColorLight, 10%), $mainColorLight, $mainColorLight);
+		padding: 0;
+	}
+
 }
 
 .blog-nav__link--active {
@@ -77,6 +146,16 @@
 		height: 100%;
 		width: 3px;
 		background-color: $accentColor;
+	}
+
+	@include tablet {
+		@include link(none, 16px, 20px, normal, $mainColorLight, $mainColorLight, $mainColorLight);
+		padding: 0;
+
+		&:after {
+			content: none;
+		}
+
 	}
 
 }
@@ -102,10 +181,6 @@
 .blog-article {
 	padding: 50px 0;
 	border-bottom: 5px solid darken($mainColorLight, 5%);
-
-	&:first-of-type {
-		padding-top: 0;
-	}
 
 	&:last-of-type {
 		border-bottom: none;

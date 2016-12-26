@@ -4,12 +4,16 @@ $mainColor: #455a64;
 $mainColorLight: #ffffff;
 $mainColorDark: #373e42;
 $accentColor: #00bfa5;
+$errorColor: #e44845;
+$linkColor: #6da3bd;
 
 $mainColorLightHover: darken($mainColorLight, 30%);
 $mainColorLightActive: darken($mainColorLight, 60%);
 
 $accentColorHover: #009688;
 $accentColorActive: darken($accentColor, 10%);
+
+$linkColorHover: darken($linkColor, 20%);
 
 $mainIconColorLight: rgba(#ffffff, 0.7);
 $mainIconColorLightHover: #ffffff;
@@ -61,6 +65,6 @@ $width: 1000px;
 
 // Media queries
 $hd-width: 1800px;
-$desktop-width: 1200px;
+$desktop-width: 1024px;
 $tablet-width: 768px;
 $mobile-width: 414px;

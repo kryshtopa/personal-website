@@ -8,7 +8,6 @@
 	@include tablet {
 		height: auto;
 		max-height: none;
-
 	}
 
 }
@@ -168,6 +167,26 @@
 
 	}
 
+	&:hover {
+		.slider-content__list {
+			&:after {
+				opacity: 0.6;
+			}
+
+		}
+
+	}
+
+	&:active {
+		.slider-content__list {
+			&:before {
+				text-shadow: (0 0 35px $accentColor);
+			}
+
+		}
+
+	}
+
 }
 
 .controls__prev {
@@ -188,4 +207,93 @@
 
 	}
 
+}
+
+.works__title {
+	@include font(35px, 41px, false, false);
+    max-width: 60%;
+	margin-top: auto;
+
+	@include mobile {
+		@include font(21px, 28px, false, false);
+	}
+}
+
+.works__skills {
+	width: 80%;
+	position: relative;
+	margin: 30px auto 40px;
+	padding: 20px 0;
+	text-align: center;
+
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		background-color: $accentColor;
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+	}
+
+	@include mobile {
+		width: 100%;
+		margin: 15px auto 20px;
+	}
+
+}
+
+.works__skills-item {
+	list-style: none;
+	display: inline;
+	color: $accentColor;
+	font-family: $fontMedium;
+	text-transform: uppercase;
+	@include font(16px, 16px, false, false);
+
+	&:not(:last-child):after {
+		content: ',';
+	}
+
+	@include mobile {
+		@include font(14px, 14px, false, false);
+	}
+
+}
+
+.works__link {
+	padding: 12px 15px;
+	border-radius: 4px;
+	background-color: $accentColor;
+	font-family: $fontMedium;
+	@include font(16px, 16px, $mainColorLight, normal);
+	text-decoration: none;
+	display: inline-block;
+	margin-bottom: auto;
+
+	&:before {
+		content: '\e90b';
+		display: inline-block;
+		vertical-align: sub;
+		font-family: 'CCU-Icons-Font' !important;
+		@include font(20px, 20px, $mainColorLight, normal);
+		margin-right: 10px;
+	}
+
+	@include mobile {
+		@include font(14px, 16px, false, false);
+	}
+	
+	&:hover {
+		color: $mainColorLight;
+		background-color: $accentColorHover;
+	}
 }

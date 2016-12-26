@@ -64,6 +64,10 @@
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 25px;
+
+	@include mobile {
+		margin-right: 10px;
+	}
 }
 
 .footer-nav__link {
@@ -75,4 +79,9 @@
 .copyright {
 	font-family: $fontLight;
 	@include font(16px, 24px, rgba($mainColorLight, .5), normal);
+	
+	@include mobile {
+		font-size: 13px;	
+	}
+
 }

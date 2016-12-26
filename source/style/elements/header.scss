@@ -78,10 +78,16 @@
 .introduction__name-text {
 	font-family: $fontHeadingSecond;
 	@include font(35px, 45px, $mainColorLight, normal);
+	margin-bottom: 0;
 
 	&:before,
 	&:after {
 		content: none;
+	}
+
+	@include mobile {
+		@include font(21px, 28px, $mainColorLight, normal);
+		margin-top: 30px;
 	}
 
 }
@@ -89,6 +95,10 @@
 .introduction__greeting-text {
 	font-family: $fontLight;
 	@include font(16px, 24px, $mainColorLight, normal);
+
+	@include mobile {
+		@include font(14px, 24px, $mainColorLight, normal);
+	}
 }
 
 .arrow-down {

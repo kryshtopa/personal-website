@@ -67,6 +67,7 @@
 }
 
 .main-nav__list {
+	padding: 0;
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -99,6 +100,8 @@
 	}
 
 	&:hover {
+		color: $mainColorLight;
+		
 		&:before,
 		&:after {
 			content: "";
@@ -108,6 +111,15 @@
 
 	&:active {
 		color: darken($accentColor, 5%);
+		&:before,
+		&:after {
+			background-color: darken($accentColor, 5%);
+		}
+	}
+
+	@include tablet {
+		font-size: 26px;
+		line-height: 32px;	
 	}
 
 }
