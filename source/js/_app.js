@@ -3,30 +3,9 @@
 $(document).ready(function() {
 	preloader.init();
 	navigation.init();
-	authFlip.init();
 	scrollToTarget.init();
-	slider.init();
 });
 
-$(window).on('scroll', function() {
-	skills.init();
+$(window).on( 'mousemove', function (e) {
+	parallax.init(e);
 });
-
-if ($('header').is('.header--works')) {
-	
-	$(document).ready(function() {
-		blur.init();
-	});
-	
-	$(window).on('resize', function() {
-		blur.init();
-	});
-
-}
-
-
-
-
-
-
-

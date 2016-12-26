@@ -23,7 +23,7 @@ var preloader = (function(){
 	var setPercents = function (total, current) {
 		var persents = Math.ceil(current / total * 100);
 
-		$('.preloader__percents').text(persents + '%');
+		$('.preloader__text').text(persents + '%');
 
 		if (persents >= 100) {
 			preloader.fadeOut();
