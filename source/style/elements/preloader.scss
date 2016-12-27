@@ -5,11 +5,15 @@
     right: 0;
     bottom: 0;
     z-index: 20000;
-    background: url(../img/bg.jpg) center no-repeat;
-    background-size: cover;
 }
 
 .preloader__img {
+    @include center;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.preloader__svg {
     @include center;
 }
 
