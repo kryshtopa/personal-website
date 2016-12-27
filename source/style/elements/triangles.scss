@@ -12,6 +12,11 @@
 
 .triangle-about .right {
 	fill: $triangleAboutColor2;
+
+	@include tablet {
+		fill: $triangleAboutColor1;
+	}
+
 }
 
 .triangle-blog .left {
