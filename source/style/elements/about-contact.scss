@@ -1,0 +1,59 @@
+.contact {
+	width: 380px;
+	margin: auto;
+	background-color: rgba(#fcfcfc, 0.85);
+	border-radius: 5px;
+	overflow: hidden;
+	padding: 30px 40px;
+	text-align: center;
+	z-index: 10;
+
+	@include tablet {
+	    width: 85%;
+	    max-width: 380px;
+	}
+}
+
+.contact__h2 {
+	@include font(35px, 41px, false, normal);
+	margin-bottom: 25px;
+}
+
+.contact__list {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+	text-align: left;
+}
+
+.contact__item {
+	margin-bottom: 25px;
+}
+
+.contact__link {
+	font-family: $font !important;
+	@include link(none, 16px, 16px, normal, $mainColor, $mainColor, $mainColor);
+
+	&:before {
+		font-family: 'CCU-Icons-Font' !important;
+		margin-right: 10px;
+		font-size: 25px;
+		color: $accentColor;
+		vertical-align: middle;
+	}
+
+	&:hover {
+		&:before {
+			color: $accentColorHover;
+		}
+
+	}
+
+	&:active {
+		&:before {
+			color: $accentColorActive;
+		}
+
+	}
+
+}
