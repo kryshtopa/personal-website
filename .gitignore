@@ -39,4 +39,4 @@ node_modules
 npm-debug.log
 
 # SFTP auth information file
-#.ftppass
+.ftppass

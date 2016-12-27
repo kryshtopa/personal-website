@@ -1,49 +1,49 @@
 'use strict';
 
 global.$ = {
-  package: require('./package.json'),
-  config: require('./gulp/config'),
-  path: {
-    task: require('./gulp/paths/tasks.js'),
-    jsFoundation: require('./gulp/paths/js.foundation.js'),
-    cssFoundation: require('./gulp/paths/css.foundation.js'),
-    app: require('./gulp/paths/app.js')
-  },
-  gulp: require('gulp'),
-  del: require('del'),
-  spritesmith: require('gulp.spritesmith'),
-  imageminPngquant: require('imagemin-pngquant'),
-  browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')()
+    package: require('./package.json'),
+    config: require('./gulp/config'),
+    path: {
+        task: require('./gulp/paths/tasks.js'),
+        jsFoundation: require('./gulp/paths/js.foundation.js'),
+        cssFoundation: require('./gulp/paths/css.foundation.js'),
+        app: require('./gulp/paths/app.js')
+    },
+    gulp: require('gulp'),
+    del: require('del'),
+    spritesmith: require('gulp.spritesmith'),
+    imageminPngquant: require('imagemin-pngquant'),
+    browserSync: require('browser-sync').create(),
+    gp: require('gulp-load-plugins')()
 };
 
 $.path.task.forEach(function(taskPath) {
-  require(taskPath)();
+    require(taskPath)();
 });
 
 $.gulp.task('default', $.gulp.series(
-  'clean',
-  'sprite',
-  $.gulp.parallel(
-    'sass',
-    'pug',
-    'js:foundation',
-    'js:process',
-    'copy:image',
-    'copy:fonts',
-    'copy:svg',
-    'css:foundation'
-  ),
-  $.gulp.parallel(
-    'watch',
-    'serve'
-  )
+    'clean',
+    'sprite',
+    $.gulp.parallel(
+        'sass',
+        'pug',
+        'js:foundation',
+        'js:process',
+        'copy:image',
+        'copy:fonts',
+        'copy:svg',
+        'css:foundation'
+    ),
+    $.gulp.parallel(
+        'watch',
+        'serve'
+    )
 ));
 
 $.gulp.task('upload', $.gulp.series(
-  'imagemin'
+    'imagemin'
 ));
 
 $.gulp.task('upload', $.gulp.series(
-  'sftp'
+    'sftp'
 ));
