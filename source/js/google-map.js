@@ -2,7 +2,7 @@
 
 if ($('header').is('.header--about')) {
 
-	window.initMap = function() {
+	window.initMap = function () {
 		// Create an array of styles.
 		var styles = [
 			{
@@ -65,6 +65,10 @@ if ($('header').is('.header--about')) {
 			icon: icon,
 			map: map
 		});
-	}
+	};
+
+	$(document).ready(function() {
+		initMap();
+	});
 
 }
