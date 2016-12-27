@@ -1,0 +1,167 @@
+.testimonials {
+	position: relative;
+	overflow: hidden;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+}
+
+.testimonials__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-width: 1250px;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	@include mobile {
+		min-width: 2000px;
+	}
+
+}
+
+.testimonials__heading {
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		@include centerX;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: .07;
+		z-index: -10;
+		background: url("../img/svg/about_header.svg") center no-repeat;
+		background-size: contain;
+
+		@include mobile {
+			background-size: 90%;
+		}
+
+	}
+
+}
+
+.testimonials__h2 {
+	@include font(63px, 66px, false, normal);
+	max-width: 275px;
+	margin: 60px auto 50px;
+
+	@include tablet {
+		@include font(49px, 52px, false, normal);
+		max-width: 100%;
+		margin: 50px auto 40px;
+	}
+
+}
+
+.testimonials__list {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.testimonials__item {
+	position: relative;
+	width: 50%;
+	padding-top: 45px;
+	margin-bottom: 30px;
+
+	&:before {
+		content: '\f901';
+		font-family: 'icomoon-fa' !important;
+		font-size: 28px;
+		opacity: .2;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	@include tablet {
+		width: 48%;
+		margin-right: 2%;
+	}
+
+	@include mobile {
+		width: 100%;
+		margin-right: 0;
+
+		&:before {
+			font-size: 32px;
+			@include centerX;
+		}
+
+	}
+
+}
+
+.testimonials__text {
+	@include font(16px, 26px, false, normal);
+
+	@include tablet {
+		@include font(14px, 24px, false, false);
+	}
+
+}
+
+.testimonials__meta {
+	display: flex;
+}
+
+.testimonials__img {
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+
+	img {
+		@include center;
+	}
+
+	@include tablet {
+		width: 75px;
+		height: 75px;
+	}
+
+}
+
+.testimonials__about {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 20px;
+}
+
+.testimonials__name,
+.testimonials__position {
+	@include font(16px, 24px, $accentColor, normal);
+
+	@include tablet {
+		@include font(14px, 24px, false, false);
+	}
+
+}
+
+.testimonials__name {
+	font-family: $fontBold;
+}
+
+.testimonials__position {
+	font-family: $font;
+}

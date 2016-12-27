@@ -17,7 +17,7 @@
 	height: 100%;
 	background: url('../img/bg-works.png');
 	background-repeat: no-repeat;
-	background-size: 900px;
+	background-size: 1250px;
 	background-position: -300px -577px;
 	filter: blur(20px);
 	position: absolute;
@@ -27,8 +27,8 @@
 	left: 0px;
 	z-index: 99;
 
-	@include tablet {
-		background-size: 1200px;
+	@include mobile {
+		background-size: 2000px;
 	}
 
 }
@@ -108,7 +108,7 @@
 	border-radius: 5px;
 	border: none;
 	background: $mainColorLight;
-	resize: vertical;
+	resize: none;
 
 	&.error {
 		border: 1px solid $errorColor;
