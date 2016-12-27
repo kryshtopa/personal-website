@@ -10,7 +10,7 @@
 
 .parallax__layer {
 	width: 3000px;
-	width: 130vw;
+	width: 100vw;
 	position: absolute;
 	height: 100%;
 	top: 0;
@@ -18,23 +18,33 @@
 	margin-left: -1500px;
 	margin-left: -55vw;
 
-	img {
-		display: block;
-		width: 100%;
-		position: absolute;
-		top: 0;
-	}
-
 	@include tablet {
-		width: 160vw;
+		width: 768px;
+		width: 100vw;
 	}
 
-	@include portrait {
-		img {
-			width: auto;
-			height: 100%;
+	@include mobile {
+		width: 414px;
+		width: 100vw;
+	}
+}
+
+.parallax__img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 120%;
+	height: 120%;
+}
+
+@for $i from 1 through 10 {
+    .parallax__img-#{$i} {
+		background-image: url(../img/bg-#{$i}.png);
+		@include tablet {
+			background-image: url(../img/bg-tablet.jpg);
 		}
-
-	}
-
+		@include mobile {
+			background-image: url(../img/bg-mobile.jpg);
+		}
+    }
 }
