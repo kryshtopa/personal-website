@@ -35,7 +35,7 @@
 	background-size: contain;
 	z-index: -10;
 	opacity: .06;
-	@include centerY;
+	@include center;
 }
 
 .header__background-text_about,
@@ -54,6 +54,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: auto;
 }
 
 .introduction {
@@ -106,7 +107,7 @@
 	color: $mainIconColorLight;
 	text-decoration: none;
 	font-size: 17px;
-	margin: 0 auto 70px;
+	margin: auto auto 70px;
 	z-index: 10;
 
 	&:hover {
